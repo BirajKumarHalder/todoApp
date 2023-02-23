@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title>Add New Task</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="save()">Save</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item lines="none">
+    <ion-label position="stacked">Title</ion-label>
+    <ion-input [(ngModel)]="title" placeholder="Task title"></ion-input>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label position="stacked">Date</ion-label>
+    <ion-input [(ngModel)]="date" placeholder="dd-MMM-yyyy"></ion-input>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label position="stacked">Time</ion-label>
+    <ion-input [(ngModel)]="time" placeholder="hh:mm Z"></ion-input>
+  </ion-item>
+</ion-content>

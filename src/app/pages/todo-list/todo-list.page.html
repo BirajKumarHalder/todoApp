@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-title>My Task List</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list *ngFor='let todo of todoList'>
+    <ion-item>
+      <ion-label>
+        {{todo.title}}
+        <p>At: {{todo.date}} {{todo.time}}</p>
+      </ion-label>
+      <ion-toggle slot="end" [checked]="todo.done" [enableOnOffLabels]="true" (ionChange)="markTodoDone(todo.id)"></ion-toggle>
+    </ion-item>
+  </ion-list>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="openAddTodo()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
